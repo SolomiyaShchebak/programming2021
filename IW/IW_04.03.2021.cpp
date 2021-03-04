@@ -25,16 +25,18 @@ void main()
 
     //Task 2
 
-    int bin, n = 0;
+    int bin, n = 0, p;
 
     cout << "Enter bin: ";
     cin >> bin;
 
-    for (int i = 0; bin > 0; i++)
+    
+    for (int p_count = 0; bin > 0; p_count++)
     {
-        n = (n * 10) + pow((bin % 10), 2);
+        p = pow(2, p_count);
+        n += (bin % 10) * p;
         bin /= 10;
     }
-
+   
     cout << n;
 }
